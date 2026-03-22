@@ -1,0 +1,25 @@
+# VulnHunter Profile — Example CTF Lab Config
+# Use with: python main.py --profile profiles/example_ctf.yaml
+#
+# All CLI flags are supported here. CLI args override profile values.
+
+url: "http://testphp.vulnweb.com/listproducts.php?cat=1"
+module: sqli
+
+threads: 10
+timeout: 15
+delay: 0.2
+retries: 3
+
+# proxy: "http://127.0.0.1:8080"
+
+headers:
+  User-Agent: "VulnHunter/2.0"
+  Accept: "text/html"
+
+cookies: {}
+
+output: "output/ctf_results.json"
+output_format: json
+verbose: false
+dry_run: false
